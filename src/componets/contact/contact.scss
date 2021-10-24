@@ -1,0 +1,100 @@
+@import "../../styles/global.scss";
+
+.contact {
+  display: flex;
+  background: url("../../assets/img/back.gif");
+
+  @include mobile {
+    // display: flex;
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+
+    @include mobile {
+      display: none;
+    }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+
+    p {
+      font-size: 30px;
+      font-weight: 500;
+      color: $black-color;
+    }
+
+    // mobile style
+    @include mobile {
+      display: flex;
+      // flex-direction: column;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      color: $black-color;
+
+      .name-email {
+        display: flex;
+        .name-input {
+          width: 300px;
+          margin-right: 20px;
+        }
+        .email-input {
+          width: 500px;
+        }
+      }
+      .errorMessage {
+        display: flex;
+        color: $content-color;
+      }
+
+      input {
+        width: 820px;
+        height: 70px;
+        font-size: 14px;
+        margin-top: 15px;
+        border: none;
+        border-bottom: 3px solid $black-color;
+        outline: none;
+        background-color: inherit;
+        font-size: 24px;
+        color: $black-color;
+      }
+
+      textarea {
+        font-size: 24px;
+        margin-top: 10px;
+        width: 820px;
+        height: 200px;
+        outline: none;
+        border: none;
+        background-color: inherit;
+        border-bottom: 3px solid $black-color;
+        padding-top: 15px;
+        color: $black-color;
+      }
+
+      button {
+        margin-top: 20px;
+        width: 200px;
+        height: 50px;
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: 700;
+        cursor: pointer;
+        margin-left: 300px;
+        &:hover {
+          background-color: $main-color;
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}

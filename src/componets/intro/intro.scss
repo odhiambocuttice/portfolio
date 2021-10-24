@@ -1,0 +1,169 @@
+@import "../../styles/global.scss";
+.intro {
+  display: flex;
+  color: $form-color;
+
+  // mobile style
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro-left {
+    flex: 1;
+    position: relative;
+
+    .intro-left-wrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 40px;
+
+      // mobile style
+      @include mobile {
+        margin: 0px;
+        width: 90%;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      h1 {
+        font-size: 70px;
+        margin: 10px, 0px;
+
+        // mobile style
+        @include mobile {
+          font-size: 32px;
+          text-align: center;
+        }
+      }
+      h2 {
+        font-size: 35px;
+        // mobile style
+        @include mobile {
+          font-size: 25px;
+          text-align: center;
+        }
+      }
+      h3 {
+        font-size: 30px;
+        // mobile style
+        @include mobile {
+          font-size: 20px;
+          text-align: center;
+        }
+
+        span {
+          font-size: 50px;
+          color: $main-color;
+
+          // mobile style
+          @include mobile {
+            font-size: 25px;
+            text-align: center;
+          }
+        }
+
+        .ityped-cursor {
+          -webkit-animation: blink 1s infinite;
+          -moz-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+          animation-direction: alternate;
+        }
+
+        @keyframes blink {
+          to {
+            opacity: 0;
+          }
+        }
+      }
+
+      a {
+        position: absolute;
+        bottom: 10px;
+        left: 90%;
+
+        .icon-arrow {
+          color: $main-color;
+          font-size: 100px;
+          -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg);
+          -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+
+          //animation-effect
+          animation: arrowBlink 2s infinite;
+        }
+
+        @keyframes arrowBlink {
+          to {
+            opacity: 0;
+          }
+        }
+
+        // mobile style
+        @include mobile {
+          font-size: 16px;
+          left: 35%;
+          bottom: 0px;
+        }
+      }
+
+      p {
+        width: 80%;
+        line-height: 30px;
+        font-size: 18px;
+        margin-top: 10px;
+
+        // mobile style
+        @include mobile {
+          font-size: 16px;
+          width: 95%;
+          text-align: center;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .intro-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    .intro-right-wrapper {
+      width: 800px;
+      height: 800px;
+
+      .bg-art {
+        clip-path: polygon(
+          100% 0%,
+          100% 52%,
+          100% 100%,
+          25% 100%,
+          0% 50%,
+          25% 0%
+        );
+        background: url("../../assets/img/kkkk.webp");
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-bottom: 140px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+      }
+    }
+  }
+}

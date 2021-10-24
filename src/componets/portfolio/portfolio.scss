@@ -1,0 +1,108 @@
+@import "../../styles/global.scss";
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $form-color;
+
+  h1 {
+    font-size: 50px;
+    color: $form-color;
+    // mobile style
+    @include mobile {
+      font-size: 28px;
+      align-items: center;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+  ul {
+    margin: 10px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+
+    // mobile style
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .portfolio-items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    // mobile style
+    @include mobile {
+      width: 100%;
+    }
+
+    .item {
+      width: 500px;
+      height: 350px;
+      border-radius: 20px;
+      border: 1px solid $main-color;
+      margin: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      overflow: hidden;
+
+      // mobile style
+      @include mobile {
+        width: 130px;
+        height: 130px;
+      }
+
+      .browser-effect {
+        width: 100%;
+        height: 30px;
+        background-color: $secondary-color;
+        display: flex;
+        align-items: center;
+        top: 0;
+        position: absolute;
+        z-index: 2;
+
+        span {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $main-color;
+          margin: 4px;
+          margin-left: 10px;
+        }
+      }
+
+      h3 {
+        position: absolute;
+        font-size: 20px;
+
+        // mobile style
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+      img {
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        transition: all 3s ease;
+      }
+      &:hover {
+        img {
+          transform: translateY(-26%);
+        }
+      }
+    }
+  }
+}

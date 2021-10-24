@@ -1,0 +1,16 @@
+// $main-color: #001233;
+$main-color: #fcc700;
+// $secondary-color: #f0efeb;
+$form-color: #f0efeb;
+$secondary-color: #221f22;
+$black-color: #0b0b09;
+$icon-hover-color: #ffc6ff;
+$content-color: #aa1d1f;
+
+$width: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
