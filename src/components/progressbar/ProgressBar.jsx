@@ -17,7 +17,7 @@ export const ProgressBar = () => {
       title: "Python",
     },
     {
-      id: 8,
+      id: 7,
       title: "Reactjs",
     },
     {
@@ -30,7 +30,7 @@ export const ProgressBar = () => {
     },
     {
       id: 9,
-      title: "Adobe Creative Studion(Ph, Ai, Lr, Ae, Pr)",
+      title: "Adobe Creative Studio(Ph, Ai, Lr, Ae, Pr)",
     },
     {
       id: 5,
