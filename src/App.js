@@ -1,8 +1,8 @@
-import { Contact } from "./componets/contact/Contact";
-import { Intro } from "./componets/intro/Intro";
-import { Portfolio } from "./componets/portfolio/Portfolio";
-import { Testimonials } from "./componets/testimonials/Testimonials";
-import { Topbar } from "./componets/topbar/Topbar";
+import { Contact } from "./components/contact/Contact";
+import { Intro } from "./components/intro/Intro";
+import { Portfolio } from "./components/portfolio/Portfolio";
+import { ProgressBarList } from "./components/progress/ProgressBarList";
+import { Topbar } from "./components/topbar/Topbar";
 import "./styles/app.scss";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <div className="sections">
         <Intro />
         <Portfolio />
-        <Testimonials />
+        <ProgressBarList />
         <Contact />
       </div>
     </div>
